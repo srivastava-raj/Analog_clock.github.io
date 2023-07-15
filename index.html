@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        
+   
+       <center><h1>Click Here To Know The timing </h1></center>
+       <center><h1 id="container4"></h1></center>
+       <center>
+      <div id="container2">
+
+
+      <h1> <b><i><p id="container3"></p><i></b></h1>
+       
+        <button class="Tik" onclick="timer()">Timing</button>
+        
+
+      </div>
+    </center>
+    </div>
+
+    <script>
+
+        function timer(){
+
+        function clock(){
+
+            var tik=new Date();
+
+           var lim=tik.toLocaleTimeString();
+
+           if(lim[lim.length-2]==='A' || lim[lim.length-2]==='a'){
+            document.getElementById('container4').innerHTML="Good Morning!";
+
+           }
+           else{
+            document.getElementById("container4").innerHTML="Good Evening!";
+           }
+            document.getElementById("container3").innerHTML=lim;
+
+        }
+
+        setInterval(clock,1000)
+
+        
+    }
+    </script>
+</body>
+</html>
